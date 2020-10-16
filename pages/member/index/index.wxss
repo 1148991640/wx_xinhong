@@ -1,0 +1,129 @@
+page {
+	background: #eee;
+}
+.g-bda-userinfo {
+padding: 38rpx 0 80rpx;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: rgb(62, 185, 62);
+}
+
+
+.userinfo-avatar {
+width: 160rpx;
+height: 160rpx;
+margin: 20rpx;
+margin-bottom: 2rpx;
+border-radius: 50%;
+border: 2px solid #D1EEEE;
+}
+.user-modify{
+  color: rgb(91, 46, 214);
+}
+/*user info*/
+.userinfo {
+   box-shadow: 0 0 15rpx 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-size: contain;
+  z-index: 0;
+  margin-bottom: 30rpx;
+  background-color: rgb(151, 134, 136);
+  background-repeat: round;
+}
+.userinfo-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(62, 185, 62);
+  background-position: 50%;
+  background-size: 100% 300rpx;
+  height: 260rpx;
+  overflow: hidden;
+  text-align: center;
+}
+
+.userinfo-avatar {
+   width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  border: 3px solid #fff;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  height: 45rpx;
+  margin-top: 14rpx;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  color: #fff;
+  background: rgb(62, 185, 62);
+}
+
+/*menu list*/
+
+.menu_list{
+  margin-bottom: 20rpx;
+}
+
+.tableviewcell {
+	padding: 20rpx 40rpx;
+	border-bottom: 1rpx solid #ddd;
+	color: #666;
+	background: white;
+	display: flex;
+	align-items: center;
+}
+
+
+/*icon*/
+.tableviewcell image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+/*text*/
+.tableviewcell text {
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+/*button*/
+.logout {
+	margin: 30rpx;
+}
+
+/*order*/
+.order-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin: 20rpx 0;
+  padding: 30rpx 0;
+}
+
+.order { 
+	width: 33.3%;
+	text-align: center;
+}
+
+.order image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.order text{
+	display: block;
+	font-size: 30rpx;
+	color: #333;
+}
+
+.userinfo-nickname_view_hide{ 
+  display: none; 
+ } 
+.userinfo-nickname_view_show{ 
+  display: block; 
+ } 

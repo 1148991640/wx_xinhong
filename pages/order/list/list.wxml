@@ -1,0 +1,27 @@
+<view class="main">
+  <view class="orders-box">
+    <view class="orders">我的订单</view>
+    <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+      <view class="orders-number">
+        编号：{{item.id}}
+        <text>金额：￥{{item.money+"   "}}</text>
+      </view>
+      <view class="orders-detail" bindtap='showLocation' data-index="{{index}}">
+          <view class="">商品：【{{item.goods}}】</view>
+          <view class="">价格：【{{item.price}}】</view>
+          <view class="">数量：【{{item.num}}】</view>
+          <view class=""><text>时间：{{item.time}}</text></view>
+          <text class="">{{item.name}},{{item.address}},{{item.tel}}</text>
+      </view>
+      <view class="orders-footer">
+        
+        <button wx:if="{{item.status==0}}" class='orders-btn' bindtap='cancelOrders' id='{{item.id}}'>退款</button>
+        <button wx:if="{{item.status==1}}" class='orders-btn' bindtap='receOrders' id='{{item.id}}'>收货</button>
+        <button wx:if="{{item.status==0}}" class='orders-status'  id='{{item.id}}'>已付款</button>
+        <button wx:if="{{item.status==1}}" class='orders-status' id='{{item.id}}'>已配送</button>
+         <button wx:if="{{item.status==2}}" class='orders-status'  id='{{item.id}}'>完成</button>
+      
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="page">
+    
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">关于我们</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">研究意义</view>
+                    <view class="weui-article__p">
+                        本新鸿医疗器械小程序系统与传统的销售方式相比，传统实体店销售需要专人看管，并且店面费用大，营业时间受限制，需要投入巨大的人力和物力。同时实体店的地点固定，消费范围有限。同时，本新鸿医疗器械小程序系统只要完成开发即可在Android端和IOS端都可以访问，将传统的信息管理模式改进成了基于微信的小程序的移动模式，使买家可以完全脱离空间的限制，随时随地的进行查看购买等，可以节约了人们的时间也加快了移动互联网时代发展的进程。
+                    </view>
+        
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">应用前景</view>
+                    <view class="weui-article__p">
+                       在移动互联网的迅速发展推进下， 微信成了人们生活中不可缺少的一款信息交流和沟通平台。现在微信平台开始主推微信小程序，功能进行了全面优化并且入口也更加简洁，所以方便大家进行使用，微信小程序未来的发展前景也更加火爆，受众群体的数量就开始变得越来越多，活跃用户数量更多就得到了众多企业的关注，因为通过微信小程序就可以拉近用户和自己的距离，同时也可以带来更好的宣传营销价值。 现在人们日常生活中更多的是通过手机微信平台进行安装各种各样的APP小程序来满足个人所需。基于微信小程序的新鸿医疗器械小程序是对美容医疗器械等产品进行的一个有针对性的交易小程序，方便有需要的用户进行购买。
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

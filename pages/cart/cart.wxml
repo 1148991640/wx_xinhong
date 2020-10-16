@@ -1,0 +1,29 @@
+<!--pages/jh/jh.wxml-->
+<view class="container carts-list">
+    <view wx:for="{{carts}}" wx:key="_this" class="carts-item" >
+        <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+        <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+        <view data-id="{{item.id}}" bindtap="bindViewTap">
+            <image class="carts-image" src="{{imgUrl}}{{item.pic}}" mode="aspectFill"/>
+        </view>
+        <view class="carts-text">
+            <text class="carts-title" data-id="{{item.id}}" bindtap="bindViewTap">{{item.name}}</text>
+            <view class="carts-subtitle">
+                <text class="carts-price">{{item.price}}</text>
+                <text bindtap="bindMinus" data-index="{{index}}">-</text>
+                <text>{{item.num}}</text>
+                <text bindtap="bindPlus" data-index="{{index}}">+</text>
+            </view>
+        </view>
+        <icon type="clear" color="red" size="20" bindtap="del" data-index="{{index}}" />
+    </view>
+</view>
+<view class="carts-footer" wx:if="{{carts}}">
+    <view bindtap="bindSelectAll">
+        <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20"/>
+        <icon wx:else type="circle" size="20" />
+        <text>全选{{total}}</text>
+    </view>
+    <view class="button" bindtap="toPayment">立即结算</view>
+</view>
+

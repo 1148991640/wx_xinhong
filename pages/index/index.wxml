@@ -1,0 +1,75 @@
+<!--index.wxml-->
+
+<view class="container">
+	<!-- //搜索栏 -->
+	<view class="page__bd">
+		<view class="weui-search-bar">
+			<view class="weui-search-bar__form">
+				<view class="weui-search-bar__box">
+					<icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+					<input type="text" class="weui-search-bar__input" placeholder="商品名称..." value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+					<view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+						<icon type="clear" size="14"></icon>
+					</view>
+				</view>
+				<label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+					<icon class="weui-icon-search" type="search" size="14"></icon>
+					<view class="weui-search-bar__text">商品名称...</view>
+				</label>
+			</view>
+			<view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" wx:if="{{inputVal.length == 0}}" bindtap="hideInput">取消</view>
+			<view class="weui-search-bar__cancel-btn" wx:if="{{inputVal.length> 0}}" bindtap="search">搜索</view>
+		</view>
+
+	</view>
+	<view class="scroll-container">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-height">
+			<block wx:for="{{imgUrls}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" style="height:{{windowWidth * 0.375}}px !important" />
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="category-panel">
+			<view class="category-item" wx:for="{{cate1}}" wx:key="cate1" bindtap="goCategory" id="{{item.id}}">
+				<image class="category-item-image" src="{{imgUrl}}{{item.pic}}" />
+				<text class="category-item-text">{{item.name}}</text>
+			</view>
+		</view>
+		<view class="category-panel">
+			<view class="category-item" wx:for="{{cate2}}" wx:key="cate2" bindtap="goCategory" id="{{item.id}}">
+				<image class="category-item-image" src="{{imgUrl}}{{item.pic}}" />
+				<text class="category-item-text">{{item.name}}</text>
+			</view>
+		</view>
+
+		<view class="sort-panel">
+			<view class="sort-item {{order=='rand'?'on':''}}" bindtap="chooseActive" id="rand">店铺首页</view>
+			<view class="sort-item {{order=='asc'?'on':''}}" bindtap="chooseActive" id="asc">全部商品</view>
+			<view class="sort-item {{order=='desc'?'on':''}}" bindtap="chooseActive" id="desc">新品上架</view>
+		</view>
+		<view class="goods-panel">
+			<template name="goodsItem">
+				<view class="goods-item{{index % 2 == 0?' odd':''}}" bindtap="goDetail" id="{{goods.id}}">
+					<view class="goods">
+						<view class="goods-tag ten" />
+						<image class="goods-image" src="{{imgUrl}}{{goods.pic}}" />
+						<view class="desc-wrapper">
+							<view class="goods-desc">{{goods.name}}</view>
+						</view>
+					</view>
+					<view class="operating">
+						<view class="tips">价格：<span>{{goods.price}}</span></view>
+					</view>
+				</view>
+			</template>
+			<template name="goodsList">
+				<block wx:for="{{goodsList}}" wx:key="_this">
+					<template is="goodsItem" data="{{index:index,goods:item,imgUrl:imgUrl}}" />
+				</block>
+			</template>
+			<template is="goodsList" data="{{goodsList:goods,imgUrl:imgUrl}}" />
+		</view>
+	</view>
+	<view class="tabbar-border"></view>
+</view>

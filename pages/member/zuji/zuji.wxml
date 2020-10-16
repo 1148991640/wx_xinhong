@@ -1,0 +1,35 @@
+
+<view class="container">
+<!-- //搜索栏 -->
+
+  <view class="scroll-container" >
+   
+   
+   
+    <view class="sort-panel" >
+        <view class="sort-item on" >浏览记录</view>
+      
+       
+    </view>
+    <view class="goods-panel">
+         <block wx:for="{{goods}}"  wx:key="_this" >
+            <view class="goods-item{{index % 2 == 0?' odd':''}}" bindtap="goDetail" id="{{item.id}}">
+            <view class="goods">
+                <view class="goods-tag ten" />
+                <image class="goods-image" src="{{imgUrl}}{{item.pic}}" />
+                <view class="desc-wrapper">
+                    <view class="goods-desc">{{item.name}}</view>
+                </view>
+            </view>
+            <view class="operating">
+                <view class="tips">价格：<span>{{item.price}}</span></view>
+               
+              
+            </view>
+        </view>
+        </block>
+    </view>
+  </view>
+  <view class="tabbar-border"></view>
+</view>
+

@@ -1,0 +1,52 @@
+/* pages/customerservice/customerservice.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+	background: #eee;
+  text-align: center;
+}
+.cus_top{
+  width: 100%;
+  text-align: center;
+  color: blue;
+  font-size: 20px;
+}
+.cus_mid{
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.phonenumber{
+  color: red;
+  size: 18px;
+  margin-left: 80px;
+}
+.img1{
+  width: 240px;
+  height: 300px;
+  padding-top: 20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -120px;
+}
+.img2{
+  width: 60px;
+  height: 60px;
+  padding-top: 340px;
+  position: relative;
+  z-index: 10;
+}
+.img3{
+  width: 60px;
+  height: 60px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 10;
+}
+.foot{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}

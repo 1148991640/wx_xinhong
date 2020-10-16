@@ -1,0 +1,25 @@
+<!--pages/customerservice/customerservice.wxml-->
+<view>
+  <view class="cus_top">
+    <text>客户服务</text>
+  </view>
+  <view class="cus_mid">如果您有什么问题可以直接用微信扫描下方二维码,添加好友进行咨询</view>
+  <view class="cus_bottom">
+    <image src="/images/二维码.jpg" class="img1" />
+  </view>
+  <view>
+    <image src="/images/ic_win.png" class="img2" />
+    <image src="/images/ic_win.png" class="img2" />
+    <image src="/images/ic_win.png" class="img2" />
+    <image src="/images/ic_win.png" class="img2" />
+    <image src="/images/ic_win.png" class="img2" />
+  </view>
+  <view>
+    <image src="/images/ic_win.png" class="img3" />
+    <image src="/images/ic_win.png" class="img3" />
+    <image src="/images/ic_win.png" class="img3" />
+    <image src="/images/ic_win.png" class="img3" />
+    <image src="/images/ic_win.png" class="img3" />
+  </view>
+  <view class="foot">如果有什么为您带来不便的地方，请您谅解</view>
+</view>

@@ -1,0 +1,21 @@
+ <view class="main">
+    <view class="goods-box" wx:if="{{goods.pic}}">
+            <image src="{{imgUrl}}{{goods.pic}}" class="goods-thumb"></image>
+      
+        <view class="goods-title">{{goods.name}}</view>
+        <view class="goods-price">￥ {{goods.price}}</view>
+    </view>
+    
+</view>
+<view class="detail">
+	{{goods.info}}
+</view>
+<view class="footer">
+    <view class="opt-buttons">
+        <view class="button-group" bindtap="showCart">
+            <image src="/images/icon_cart.png" class="button-image" />
+            <text class="button-text">购物车</text>
+        </view>
+    </view>
+    <button class="add-cart" bindtap="addCart" >加入购物车</button>
+</view>
